@@ -39,10 +39,10 @@ const updateConversionrate = async () => {
         alert("Enter a proper input");
     }
     else{
-        let URL=`${baseurl}/${fromCur.value.toLowerCase()}/${toCur.value.toLowerCase()}.json`;
+        let URL=`${baseurl}/${fromCur.value.toLowerCase()}.json`;
         let response = await fetch(URL);
         let data = await response.json();
-        let rate=data[toCur.value.toLowerCase()];
+        let rate=data[fromCur.value.toLowerCase()][toCur.value.toLowerCase()];
         let finalanswer=(rate*value).toFixed(3);
         answer.innerText=`${value} ${fromCur.value.toLowerCase()} = ${finalanswer} ${toCur.value.toLowerCase()}`;
     }
