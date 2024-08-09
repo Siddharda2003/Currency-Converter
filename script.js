@@ -4,7 +4,8 @@ let toCur=document.querySelector(".op2 select");
 let convert=document.querySelector(".btn");
 let amount=document.querySelector("#amount");
 let answer=document.querySelector(".answer");
-let baseurl = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
+let baseurl = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/";
+
 for(let select of options){
     for(let curr in countryList){
         let newoption=document.createElement("option");
